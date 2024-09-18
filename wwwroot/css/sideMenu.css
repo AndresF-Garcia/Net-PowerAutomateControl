@@ -1,0 +1,8 @@
+﻿.sideMenu {
+    min-width: 54px;
+    height: calc(100vh - 59px);
+}
+
+    .sideMenu .sideMenu-item {
+        padding: 9px 13px;
+    }
