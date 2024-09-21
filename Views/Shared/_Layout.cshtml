@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/PowerAutomateControl.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sideMenu.css" asp-append-version="true" />
+    
 </head>
 <body class="relative h-full">
     <header>
@@ -17,7 +18,7 @@
                     <!--Espacio para boton de abrir menu en mobile-->
                 </div>
                 <!--Environment Selector-->
-                <div class="w-auto py-3 pr-32 hover:bg-blue-400">
+                <div id="currentEnvironment" class="w-auto py-3 pr-32 hover:bg-blue-400">
                     <div class="border-l-2 flex flex-col border-black pl-5">
                         <span style="font-size: 10px;">Entorno</span>
                         <span class="text-sm">Prueba</span>
@@ -59,11 +60,34 @@
     </div>
 
     <!--Environment selector-->
-    <div class="absolute right-0 hidden w-72 bg-red-50" style="height: calc(100vh - 59px); top:59px;">
-        entormo
+    <div id="environmentSideBar" class="border-t-2 border-l-2 absolute right-0 hidden w-72 border-gray-100 bg-white" style="height: calc(100vh - 59px); top:59px;">
+        <!--Close button-->
+        <div class="flex cursor-pointer justify-end" id="closeEnvironmentSideBar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="black" class="mr-2 size-7">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <!--Add environment button-->
+        <div class="flex cursor-pointer px-2 py-3 hover:text-blue-800" onclick="loadEnvironments()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <p>Añadir entorno</p>
+        </div>
+        <hr>
+        <!--My environments-->
+        <div class="px-2 pt-2">
+            <span class="text-base">Mis entornos</span>
+            <div id="myEnvironmentsArea">
+                <div class="px-1 py-2 hover:bg-gray-100">
+                    <span class="text-sm">test-An</span>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/Environments.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
