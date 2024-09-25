@@ -5,4 +5,69 @@
 @{
 }
 
-<h1>Test beat</h1>
+<!--Modal background-->
+<div id="modal_CreateEnvironment" class="left-0-0 absolute top-0 flex h-full w-full items-center justify-center bg-gray-400 bg-opacity-15" style="z-index: 100;">
+    <!--Modal content-->
+    <div class="mx-auto w-5/12 rounded-md bg-white px-6 py-4 shadow-lg md:w-2/3 lg:w-1/2" style="z-index: 101;">
+        <!--Header-->
+        <div class="border-b-2 flex justify-between border-gray-300 pb-2">
+            <span class="font-bold">Entorno</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
+        <!--Content-->
+        <div class="flex flex-wrap py-3">
+            <!--Name-->
+            <div class="w-full">
+                <label for="name" class="text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text"
+                       name="name"
+                       id="env_name"
+                       placeholder="Nombre del entorno"
+                       class="border-2 mt-1 w-full rounded-md border-blue-100 bg-gray-50 px-2 shadow-sm placeholder:text-sm">
+            </div>
+            <!--ClientId-->
+            <div class="mt-2 w-1/2 pr-3">
+                <label for="clientId" class="text-sm font-medium text-gray-700">ClientId</label>
+                <input type="text"
+                       name="clientId"
+                       id="env_clientId"
+                       placeholder="ClientId"
+                       class="border-2 mt-1 w-full rounded-md border-blue-100 bg-gray-50 px-2 shadow-sm placeholder:text-sm">
+            </div>
+            <!--ClientSecret-->
+            <div class="mt-2 w-1/2 pl-3">
+                <label for="clientSecret" class="text-sm font-medium text-gray-700">ClientSecret</label>
+                <input type="text"
+                       name="clientSecret"
+                       id="env_clientSecret"
+                       placeholder="ClientSecret"
+                       class="border-2 mt-1 w-full rounded-md border-blue-100 bg-gray-50 px-2 shadow-sm placeholder:text-sm">
+            </div>
+            <!--Resource-->
+            <div class="mt-2 w-1/2 pr-3">
+                <label for="resource" class="text-sm font-medium text-gray-700">Resource</label>
+                <input type="text"
+                       name="resource"
+                       id="env_resource"
+                       placeholder="Resource"
+                       class="border-2 mt-1 w-full rounded-md border-blue-100 bg-gray-50 px-2 shadow-sm placeholder:text-sm">
+            </div>
+            <!--Tenant-->
+            <div class="mt-2 w-1/2 pl-3">
+                <label for="tenant" class="text-sm font-medium text-gray-700">Tenant</label>
+                <input type="text"
+                       name="tenant"
+                       id="env_tenant"
+                       placeholder="Tenant"
+                       class="border-2 mt-1 w-full rounded-md border-blue-100 bg-gray-50 px-2 shadow-sm placeholder:text-sm">
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="border-t-2 flex justify-end border-gray-300 pt-2">
+            <button class="mr-2 rounded bg-gray-500 px-3 py-1 font-bold text-white hover:bg-gray-700">Cancelar</button>
+            <button class="rounded bg-blue-500 px-3 py-1 font-bold text-white hover:bg-blue-700">Guardar</button>
+        </div>
+    </div>
+</div>
